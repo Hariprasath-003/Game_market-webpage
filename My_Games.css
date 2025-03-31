@@ -1,0 +1,121 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url(image/mygamesbg3.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    color: white;
+}
+nav{
+    background-color: #002961;
+    box-shadow: 4px 0px 5px black;
+    z-index: 1050;
+    
+}
+.navbar {
+    background-color: #000000;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.nav .nav-item{
+    
+    margin-left: 30;
+    margin-right: 30;
+}
+.nav-link{
+    color: white;
+}
+.navbar img{
+    height: 50;
+    width: 140;
+}
+.navbar img:hover{
+    transform: rotateY(360deg);
+    transition: 0.5s;
+}
+.custom-tooltip {
+    display: none;
+    position: absolute;
+    background-color: #1E201E;
+    border: 1px solid #343a40;
+    border-radius: 0.25rem;
+    box-shadow: 0px 4px 6px black;
+    padding: 10px;
+    z-index: 1050;
+    white-space: nowrap;
+    color: white;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    font-weight: bold;
+}
+.nav-item:hover{
+    transform: translateY(-3px);
+    transition: 0.2s;
+}
+
+.nav-item:hover .custom-tooltip {
+    display: block;
+}
+.card{
+    margin: 20px;
+
+}
+
+.card:hover img{
+    padding: 10px;
+
+}
+.container{
+    animation: card_ani;
+    animation-duration: 1s;
+}
+
+.card .btn {
+    background-color: black;
+    border: none;
+    padding: 8px 12px;
+    font-size: 0.875rem;
+    display: inline-block;
+    color: white;
+}
+@keyframes card_ani{
+    from{
+        width: 0;
+        height: 0;
+    }
+}
+
+#offcanvasExample {
+    background: linear-gradient(to right, #1c2d47, #343a40);
+    color: #fff;
+}
+  
+#offcanvasExample img {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    width: 200;
+    height: 200;
+    border-radius: 8px;
+}
+  
+#offcanvasExample .offcanvas-body {
+    padding: 20px;
+}
+  
+#offcanvasExample .dropdown-menu {
+    background-color: #343a40;
+    color: #fff;
+}
+  
+#offcanvasExample .dropdown-menu .dropdown-item {
+    color: #fff;
+}
+  
+#offcanvasExample .dropdown-menu .dropdown-item:hover {
+    background-color: #1e3c72;
+}
+  

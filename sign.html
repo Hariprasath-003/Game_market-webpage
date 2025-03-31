@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="Sign_up.css">
+    <title>GAMEPAGE</title>
+    <link rel="icon" href="image/icon.jpg">
+    <style>
+        body{
+            font-family: 'Courier New', Courier, monospace;
+            background-image: url(image/signupbg2.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            margin: 0;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .signup-card {
+            background-image: url(image/signupcard1.jpg);
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            padding: 2rem;
+            width: 100%;
+            max-width: 400px;
+            margin: auto;
+            
+        }
+        
+        
+        
+        .btn-grad {background-image: linear-gradient(to right, #00bf8f 0%, #001510  51%, #00bf8f  100%)}
+        .btn-grad {
+             margin: 10px;
+             padding: 15px 45px;
+             text-align: center;
+             text-transform: uppercase;
+             transition: 0.5s;
+             background-size: 200% auto;
+             color: white;            
+             box-shadow: 0 0 20px #eee;
+             border-radius: 10px;
+             display: block;
+        }
+        
+        .btn-grad:hover {
+             background-position: right center;
+             color: #fff;
+             text-decoration: none;
+        }
+        
+        .container {
+            position: absolute;
+            display: flex;
+            flex: 1;
+            flex-direction: row;
+            gap: 1rem;
+            animation: sign_ani 1s ease-in-out forwards;
+        }
+          
+        @keyframes sign_ani {
+            from {
+              right: 100px;
+            }
+            to {
+              right: 445px;
+            }
+        }
+          
+        
+        .box{
+          flex: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          font-size: 1.5rem;
+          width: auto;
+          height: 500px;
+        }
+        
+        .ball {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 120px;
+            height: 120px;
+            border: 0px solid black;
+            background-image: url(image/ballbg.jpg);
+            border-radius: 50%;
+            animation: ball_ani 8s infinite;
+            text-align: center;
+            font-weight: bold;
+            color: black;
+            z-index: 1020;
+            background-size: cover;
+        }
+          
+        @keyframes ball_ani {
+            0% {
+              top: 100px;
+              right: 50px;
+            }
+            25% {
+              top: 400px;
+              right: 600px;
+            }
+            50% {
+              top: 100px;
+              right: 600px;
+            }
+            75% {
+              top: 400px;
+              right: 50px;
+            }
+            100% {
+              top: 100px;
+              right: 50px;
+            }
+        }
+        .ball p{
+            margin: 0;
+        }  
+        .game-text {
+            position: absolute;
+            right: 100px;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: right;
+          }
+          
+        .game-text span {
+            display: block;
+            text-shadow: 2px 4px 4px gray;
+            font-family: 'Impact', 'Arial Black', sans-serif;
+            font-size: 10rem;
+            color: #fff;
+            line-height: 1;
+            text-transform: uppercase;
+            font-weight: bolder;
+            margin: 10px 0;
+            animation: title_ani 2s ease-in-out forwards;
+        
+        }
+          
+        @keyframes title_ani {
+            0% {
+              opacity: 0;
+              transform: translateY(30px) scale(0.8);
+            }
+            50% {
+              opacity: 0.7;
+              transform: translateY(-10px) scale(1.05);
+            }
+            100% {
+              opacity: 1;
+              transform: translateY(0) scale(1);
+            }
+        }
+        .game{
+            z-index: 1030;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="signup-card" data-aos="fade-up">
+            <h3 class="text-center mb-4">Sign Up</h3>
+            <form id="signupForm">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                </div>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-grad">Sign Up</button>
+                </div>
+            </form>
+            <p class="text-center mt-3">Already have an account? <a href="#">Sign in here</a></p>
+        </div>
+    </div>
+    <div class="box">
+        <div class="game-text">
+            <span class="game">GAME</span>
+            <span class="page">PAGE</span>
+        </div>
+        
+        <a href="Home.html"> 
+            <div class="ball">
+                <p>Home</p>
+            </div>
+        </a>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#signupForm').on('submit', function (e) {
+                e.preventDefault();
+
+                const name = $('#name').val().trim();
+                const email = $('#email').val().trim();
+                const password = $('#password').val();
+
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    alert('Please enter a valid email address.');
+                    return;
+                }
+
+                const passwordRegex = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+                if (!passwordRegex.test(password)) {
+                    alert('Password must be at least 8 characters long and include a letter, a number, and a special symbol.');
+                    return;
+                }
+
+                alert('Form submitted successfully!\nName: ' + name + '\nEmail: ' + email);
+
+                $('#signupForm')[0].reset();
+            });
+
+            $('.ball').hover(
+                function () {
+                    $(this).css({ transform: 'scale(1.1)', transition: 'transform 0.2s ease-in-out' });
+                },
+                function () {
+                    $(this).css({ transform: 'scale(1)', transition: 'transform 0.2s ease-in-out' });
+                }
+            );
+
+            $('#signupForm input').on('focus', function () {
+                $(this).css("background-color", "gray");
+            });
+
+            $('#signupForm input').on('blur', function () {
+                $(this).css('border-color', 'white');
+            });
+        });
+    </script>
+</body>
+</html>
