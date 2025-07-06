@@ -3,7 +3,9 @@
 A responsive, static website template for a game marketplace. Built with HTML, CSS, and JavaScript to showcase games, highlight offers, and provide a user-friendly browsing experience.
 
 ---
+🌐 **Live Demo:** [https://hariprasath-003.github.io/Game_market-webpage/](https://hariprasath-003.github.io/Game_market-webpage/)
 
+---
 ## 🧩 Overview
 
 This project is a frontend design for a digital game marketplace, focused on visual appeal and responsive layout. It includes sections for featured games, game details, offers, and a styled navigation layout.
